@@ -1,0 +1,38 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+@font-face {
+  font-family: ondo;
+  src: url('../fonts/FontsFree-Net-Ondo-Regular.ttf');
+}
+:root{
+  --primary : #2D1E6B;
+  --secendery : #DD00B8;
+  --white : #fff;
+  --black : #000;
+}
+a,a:visited{text-decoration: none;}
+
+ul>li{list-style-type: none;}
+main{
+  height: 100vh;
+  background-color: var(--primary);
+}
+.header{
+  &>.head-nav{
+    /* background-color: rgba(0, 0, 0,0.5); */
+    &>.head-nav-logo{
+      /* border: 1px solid red; */
+    }
+    &>.head-nav-menu{
+       &>li{
+        font-family: ondo;
+        font-size: 18px;
+        /* font-weight: 400; */
+        letter-spacing: 0.72px;
+        &>a{
+          color: var(--white) !important;
+          color: white !important;
+        }
+      }
+    }
+  }
+}
