@@ -40,12 +40,11 @@ let flag2 = 0
 window.addEventListener('scroll', e => {
   if (flag2 <= 0) {
     flag2 -= 20
-    if (flag2 == -1500) {
+    if (flag2 == -1400) {
       flag2 = 0
     }
   }
   moverFigure.forEach(val => {
-    console.log(document.getElementsByTagName('main')[0].scrollTop)
     val.style.transform = `translateX(${flag2}px)`
   })
 })
