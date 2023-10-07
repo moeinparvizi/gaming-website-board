@@ -1,11 +1,17 @@
 // menu click _*_*_*_*_*_*_*_*_*_*_*_*_*_
 const menuLi = document.querySelectorAll('.menu-li')
+// resetting function
+const menuLiResetting = () => {
+  menuLi.forEach(val => {
+    val.classList.remove('fw-bold')
+    val.classList.remove('text-light')
+  })
+}
 menuLi.forEach((val) => {
-  // resetting
-  val.classList.remove('fw-bold')
-  val.classList.remove('text-light')
   // clicked
   val.addEventListener('click', () => {
+    // resetting
+    menuLiResetting()
     val.classList.toggle('fw-bold')
     val.classList.toggle('text-light')
   })
