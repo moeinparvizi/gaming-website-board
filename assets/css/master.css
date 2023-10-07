@@ -16,9 +16,10 @@
 a,a:visited{text-decoration: none;}
 
 ul>li{list-style-type: none;}
+
 main{
-  height: 100vh;
-  background-color: var(--primary);
+  height: 400vh;
+  background-color: var(--primary) !important;
 }
 .header{
   height: 100vh;
@@ -87,4 +88,38 @@ main{
   position: absolute;
   border: 1px solid red;
 }
-
+@keyframes textm {
+  from{
+    transform: translateX(+1000);
+  }
+  to{
+    transform: translateX(-1000px);
+  }
+}
+.glass-mover{
+  width: 2455px;
+  height: 90px;
+  transform: translateY(-30px) rotate(-1.983deg);
+  flex-shrink: 0;
+  >div{
+    border: 1px solid #fff;
+    background: url(<path-to-image>), lightgray 0% 0% / 100px 100px repeat, linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+    box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0.00);
+    backdrop-filter: blur(25px);
+    >figure{
+      transition: 1s;
+      /* animation:textm 4s linear infinite; */
+      margin: 0 20px;
+      >figcaption{
+        color: #FFF;
+        font-family: Ondo;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110.6%; /* 33.18px */
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
