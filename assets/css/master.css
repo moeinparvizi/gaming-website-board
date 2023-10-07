@@ -3,6 +3,10 @@
   font-family: ondo;
   src: url('../fonts/FontsFree-Net-Ondo-Regular.ttf');
 }
+@font-face {
+  font-family: lato;
+  src: url('../fonts/Lato/Lato-Regular.ttf');
+}
 :root{
   --primary : #2D1E6B;
   --secendery : #DD00B8;
@@ -17,13 +21,18 @@ main{
   background-color: var(--primary);
 }
 .header{
-  &>.head-nav{
+  height: 100vh;
+  background: url('../../assets/images/Artboard\ 1\ 1.png'), -91.869px 41.66px / 102.737% 92.356% no-repeat;
+  background-size: cover;
+  mix-blend-mode: color-dodge;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  .head-nav{
     /* background-color: rgba(0, 0, 0,0.5); */
     &>.head-nav-logo{
       /* border: 1px solid red; */
     }
     &>.head-nav-menu{
-       &>li{
+      &>li{
         font-family: ondo;
         font-size: 18px;
         /* font-weight: 400; */
@@ -35,4 +44,47 @@ main{
       }
     }
   }
+  >.header-dec{
+    >p{
+      width: 602px;
+      color: #FFF;
+      font-family: lato;
+      font-size: 18.715px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 185.1%; /* 34.642px */
+      letter-spacing: 0.749px;
+    }
+    >.header-button{
+      >div{
+        transition: all .4s linear;
+      }
+    }
+    >.header-numbers{
+      >figure{
+        >figcaption{
+          color: #FFF;
+          font-family: lato;
+          font-size: 18.715px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 185.1%; /* 34.642px */
+          letter-spacing: 0.749px;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
 }
+.right-circle{
+  top: 50px;
+  right: 20px;
+  width: 341px;
+  height: 341px;
+  border-radius: 50%;
+  background: var(--secendery);
+  filter: blur(292px);
+  position: absolute;
+  border: 1px solid red;
+}
+
