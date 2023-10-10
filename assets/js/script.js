@@ -39,7 +39,7 @@ const moverFigure = document.querySelectorAll('.glass-mover>div>figure')
 let flag2 = 0
 window.addEventListener('scroll', e => {
   if (flag2 <= 0) {
-    flag2 -= 20
+    flag2 -= 10
     if (flag2 == -1400) {
       flag2 = 0
     }
@@ -47,4 +47,25 @@ window.addEventListener('scroll', e => {
   moverFigure.forEach(val => {
     val.style.transform = `translateX(${flag2}px)`
   })
+})
+
+// fixed menu on top
+// 
+const menuScroll = document.querySelector('.head-nav-menu')
+menuScroll.style.transition = '1s'
+window.addEventListener('scroll', (e) => {
+  menuScroll.style.left = '400px'
+  if (window.scrollY > 50) {
+    menuScroll.style.position = 'fixed'
+    menuScroll.style.left = '0'
+  } if (window.scrollY < 50) {
+    menuScroll.style.left = '400px'
+    omenuScroll.style.opacity = '0'
+    setTimeout(() => {
+      menuScroll.style.position = 'relative'
+      menuScroll.style.backgroundColor = 'rgba(0, 0, 0,0.5);'
+      menuScroll.style.left = '0'
+      omenuScroll.style.opacity = '1'
+    }, 1000)
+  }
 })
