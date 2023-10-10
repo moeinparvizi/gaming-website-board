@@ -198,7 +198,10 @@ main{
 .mobile-navigation-bar{
   /* border: 1px solid white; */
   top: 20px;
+  z-index: 999999;
   .mobile-logo{
+    
+    z-index: 200;
     >img{
       width: 100px;
       transform: translateY(25%);
@@ -213,9 +216,24 @@ main{
     >div{
       border: 1px solid red;
       position: fixed;
-      top: 50px;
-      left: 50px;
-      /* transform: translateX(-3000px); */
+      top: 0;
+      left: -3000px;
+      background-color: rgba(0, 0, 0, 0.7);
+      mix-blend-mode: normal;
+      >ul{
+        justify-content: start !important;
+        >li{
+          transition: 1s;
+          font-family: ondo;
+          font-size: 18px;
+          /* font-weight: 400; */
+          letter-spacing: 0.72px;
+          cursor: pointer;
+          &>a{
+            color: var(--white) !important;
+          }
+        }
+      }
     }
   }
 }

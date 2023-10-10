@@ -69,3 +69,37 @@ window.addEventListener('scroll', (e) => {
     }, 1000)
   }
 })
+
+// click on icon menu
+let flag3 = true
+document.querySelector('.mobile-menu>i').addEventListener('click', e => {
+  e.target.style.transition = '1s'
+  if (flag3 == true) {
+    e.target.style.opacity = '0'
+    e.target.classList.remove('bi-list')
+    setTimeout(() => {
+      e.target.classList.add('bi-x-lg')
+      e.target.style.opacity = '1'
+    }, 500)
+    openningMenu()
+    flag3 = false
+  } else {
+    e.target.style.opacity = '0'
+    e.target.classList.remove('bi-x-lg')
+    setTimeout(() => {
+      e.target.classList.add('bi-list')
+      e.target.style.opacity = '1'
+    }, 500)
+    openningMenu()
+    flag3 = true
+  }
+})
+const mobileMenuList = document.querySelector('.mobile-menu-list')
+mobileMenuList.style.transition = '1s'
+const openningMenu = () => {
+  if (flag3 == true) {
+    mobileMenuList.style.left = '0'
+  } else {
+    mobileMenuList.style.left = '-3000px'
+  }
+}
