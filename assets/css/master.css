@@ -20,13 +20,22 @@ ul>li{list-style-type: none;}
 main{
   height: 400vh;
   background-color: var(--primary) !important;
+  @media only screen and (max-width: 600px) {
+    background-color: #351F7A;
+  }
 }
 .header{
   height: 100vh;
+  background: #2F1F6F;
   background: url('../../assets/images/Artboard\ 1\ 1.png'), -91.869px 41.66px / 102.737% 92.356% no-repeat;
   background-size: cover;
   mix-blend-mode: color-dodge;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    @media only screen and (max-width: 600px) {
+      background-size: 165%;
+      background-repeat: no-repeat;
+      background-position: 97% 85%;
+    }
   .head-nav{
     background-color: rgba(0, 0, 0,0.5);
     &>.head-nav-logo{
@@ -51,6 +60,18 @@ main{
     }
   }
   >.header-dec{
+    @media only screen and (max-widht: 600px) {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    >figure{
+      >img{
+        @media only screen and (max-width:600px) {
+          margin-top: 80px;
+          width: 334px !important;
+        }
+      }
+    }
     >p{
       width: 602px;
       color: #FFF;
@@ -60,17 +81,16 @@ main{
       font-weight: 400;
       line-height: 185.1%; /* 34.642px */
       letter-spacing: 0.749px;
-      /* @media only screen and (max-width:600px) { */
-      /*   width: 300px; */
-      /*   font-size: 10px; */
-      /*   font-weight: 200; */
-      /*   line-height: 100%; */
-      /* } */
+      @media only screen and (max-width: 600px) {
+        font-size: 16px !important;
+        letter-spacing: 0.64px !important;
+        width: 329px !important;
+      }
     }
     >.header-button{
       @media only screen and (max-width:600px) {
         position: absolute;
-        top: 115%;
+        top: 90%;
         left: 50%;
         transform: translateX(-100%);
         width: 100px;
@@ -87,6 +107,10 @@ main{
       }
     }
     >.header-numbers{
+      @media only screen and (max-width:600px) {
+        position: absolute;
+        top: 100%;
+      }
       >figure{
         >figcaption{
           color: #FFF;
@@ -113,28 +137,44 @@ main{
   /* position: absolute; */
   border: 1px solid red;
 }
-@keyframes textm {
-  from{
-    transform: translateX(+1000);
-  }
-  to{
-    transform: translateX(-1000px);
-  }
-}
+/* @keyframes textm { */
+/*   from{ */
+/*     transform: translateX(+1000); */
+/*   } */
+/*   to{ */
+/*     transform: translateX(-1000px); */
+/*   } */
+/* } */
 .glass-mover{
   width: 3356px;
   height: 90px;
   transform: translateY(-40px) rotate(-1.983deg);
   flex-shrink: 0;
+  @media only screen and (max-width: 600px) {
+    transform: translateY(-110px) rotate(-1.983deg);
+    width: 803.767px;
+    height: 49.786px;
+  }
   >div{
     border: 1px solid rgba(186, 186, 186,.5);
-    background: url(<path-to-image>), lightgray 0% 0% / 100px 100px repeat, linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+    background:  lightgray 0% 0% / 100px 100px repeat, linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
     box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0.00);
     backdrop-filter: blur(25px);
     >figure{
       transition: 1s;
       /* animation:textm 4s linear infinite; */
       margin: 0 20px;
+      @media only screen and (max-width: 600px) {
+        width: 191.872px;
+        height: 19.914px;
+        flex-shrink: 0;
+      }
+      >img{
+        @media only screen and (max-width: 600px) {
+          width: 20px;
+          height: 20px;
+        }
+      }
       >figcaption{
         color: #FFF;
         font-family: Ondo;
@@ -144,7 +184,38 @@ main{
         line-height: 110.6%; /* 33.18px */
         letter-spacing: 1.2px;
         text-transform: uppercase;
+        @media only screen and (max-width: 600px) {
+          font-size: 16.595px;
+          font-weight: 800;
+          line-height: 110.6%; /* 18.354px */
+          letter-spacing: 0.664px;
+          text-transform: uppercase;
+        }
       }
+    }
+  }
+}
+.mobile-navigation-bar{
+  /* border: 1px solid white; */
+  top: 20px;
+  .mobile-logo{
+    >img{
+      width: 100px;
+      transform: translateY(25%);
+    }
+  }
+  >.mobile-menu{
+    >i{
+      margin-right: 10px;
+      color: #fff;
+      font-size: 25px;
+    }
+    >div{
+      border: 1px solid red;
+      position: fixed;
+      top: 50px;
+      left: 50px;
+      /* transform: translateX(-3000px); */
     }
   }
 }
