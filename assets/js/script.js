@@ -74,7 +74,7 @@ window.addEventListener('scroll', () => {
   menuScroll.style.backgroundColor = 'rgba(255, 255, 255, .3)'
   if (window.scrollY > 500) {
     menuScroll.style.position = 'fixed'
-    // menuScroll.style.zIndex = '99999 !important'
+    menuScroll.style.zIndex = '99999 !important'
     menuScroll.style.left = '0'
     menuScroll.style.backgroundColor = 'rgba(255, 255, 255, .5)'
   } if (window.scrollY < 500) {

@@ -112,6 +112,22 @@ main{
   }
 }
 // header site
+.head-nav-menu{
+    z-index: 999999;
+  /* width: 100%; */
+    transition: 1s;
+  &>li{
+    font-family: ondo;
+    font-size: 18px;
+    /* font-weight: 400; */
+    letter-spacing: 0.72px;
+    cursor: pointer;
+    &>a{
+      color: var(--white) !important;
+      color: white !important;
+    }
+  }
+}
 .header{
   height: 100vh;
   background: #2F1F6F;
@@ -124,27 +140,6 @@ main{
       background-repeat: no-repeat;
       background-position: 97% 85%;
     }
-  .head-nav{
-    background-color: rgba(0, 0, 0,0.5);
-    &>.head-nav-logo{
-      /* border: 1px solid red; */
-    }
-    &>.head-nav-menu{
-      /* width: 100%; */
-        transition: 1s;
-      &>li{
-        font-family: ondo;
-        font-size: 18px;
-        /* font-weight: 400; */
-        letter-spacing: 0.72px;
-        cursor: pointer;
-        &>a{
-          color: var(--white) !important;
-          color: white !important;
-        }
-      }
-    }
-  }
   >.header-dec{
     @media only screen and (max-widht: 600px) {
       margin: 0 !important;
