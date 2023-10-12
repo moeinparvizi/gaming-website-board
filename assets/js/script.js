@@ -21,7 +21,7 @@ menuLi[0].classList.add('fw-bold')
 menuLi[0].classList.add('text-light')
 
 // header button if hover
-document.querySelectorAll('.header-button>div').forEach(val => {
+const buttonHover = (val) => {
   val.addEventListener('mouseover', () => {
     val.classList.add('animate__animated')
     val.classList.add('animate__pulse')
@@ -32,6 +32,12 @@ document.querySelectorAll('.header-button>div').forEach(val => {
     val.classList.remove('animate__pulse')
     val.style.opacity = '1'
   })
+}
+document.querySelectorAll('.header-button>div').forEach(v => {
+  buttonHover(v)
+})
+document.querySelectorAll('.virtual-reality>div>div>.header-button-two').forEach(v => {
+  buttonHover(v)
 })
 
 // scroll animation
@@ -46,12 +52,15 @@ window.addEventListener('scroll', e => {
     }
   }
   moverFigure.forEach(val => {
-    val.style.transform = `translateX(${flag2}px)`
+    glassMoverTransform(val)
   })
   moverFigure2.forEach(val => {
-    val.style.transform = `translateX(${flag2}px)`
+    glassMoverTransform(val)
   })
 })
+const glassMoverTransform = (v) => {
+  v.style.transform = `translateX(${flag2}px)`
+}
 
 // fixed menu on top
 // 
@@ -121,15 +130,3 @@ let swiper = new Swiper(".mySwiper", {
   },
 });
 
-document.querySelectorAll('.virtual-reality>div>div>.header-button-two').forEach(val => {
-  val.addEventListener('mouseover', () => {
-    val.classList.add('animate__animated')
-    val.classList.add('animate__pulse')
-    val.style.opacity = '.8'
-  })
-  val.addEventListener('mouseleave', () => {
-    val.classList.remove('animate__animated')
-    val.classList.remove('animate__pulse')
-    val.style.opacity = '1'
-  })
-})
