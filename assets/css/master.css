@@ -22,6 +22,7 @@ main{
   background-color: var(--primary) !important;
   @media only screen and (max-width: 600px) {
     background-color: #351F7A;
+    width: 100%;
   }
 }
 .header{
@@ -85,7 +86,11 @@ main{
         font-size: 16px !important;
         letter-spacing: 0.64px !important;
         width: 329px !important;
+        background-color: rgba(0,0,0, .9);
       }
+      /* @media only screen and (max-width: ) { */
+      /**/
+      /* } */
     }
     >.header-button{
       @media only screen and (max-width:600px) {
