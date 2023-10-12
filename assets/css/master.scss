@@ -47,6 +47,61 @@ ul>li{list-style-type: none;}
     flex-wrap: wrap !important;
   }
 }
+@mixin glassMover($counter){
+  width: 3356px;
+  height: 90px;
+  flex-shrink: 0;
+  @if $counter == 1{
+    transform: translateY(-40px) rotate(-1.983deg);
+  }
+  @media only screen and (max-width: 600px) {
+    @if $counter == 1{
+      transform: translateY(-110px) rotate(-1.983deg);
+    }
+    width: 803.767px;
+    height: 49.786px;
+  }
+  &>div{
+    @if $counter == 1{
+      border: 1px solid rgba(186, 186, 186,.5);
+    }
+    @include transparentBG;
+    
+    &>figure{
+      transition: 1s;
+      /* animation:textm 4s linear infinite; */
+      margin: 0 20px;
+      @media only screen and (max-width: 600px) {
+        width: 191.872px;
+        height: 19.914px;
+        flex-shrink: 0;
+      }
+      &>img{
+        @media only screen and (max-width: 600px) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      &>figcaption{
+        color: #FFF;
+        font-family: Ondo;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110.6%; /* 33.18px */
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        @media only screen and (max-width: 600px) {
+          font-size: 16.595px;
+          font-weight: 800;
+          line-height: 110.6%; /* 18.354px */
+          letter-spacing: 0.664px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
 // main tag
 main{
   height: 400vh;
@@ -76,10 +131,8 @@ main{
     }
     &>.head-nav-menu{
       /* width: 100%; */
-      /* position: fixed; */
         transition: 1s;
       &>li{
-        transition: 1s;
         font-family: ondo;
         font-size: 18px;
         /* font-weight: 400; */
@@ -176,53 +229,7 @@ main{
 /*   } */
 /* } */
 .glass-mover{
-  width: 3356px;
-  height: 90px;
-  transform: translateY(-40px) rotate(-1.983deg);
-  flex-shrink: 0;
-  @media only screen and (max-width: 600px) {
-    transform: translateY(-110px) rotate(-1.983deg);
-    width: 803.767px;
-    height: 49.786px;
-  }
-  &>div{
-    border: 1px solid rgba(186, 186, 186,.5);
-    @include transparentBG;
-    
-    &>figure{
-      transition: 1s;
-      /* animation:textm 4s linear infinite; */
-      margin: 0 20px;
-      @media only screen and (max-width: 600px) {
-        width: 191.872px;
-        height: 19.914px;
-        flex-shrink: 0;
-      }
-      &>img{
-        @media only screen and (max-width: 600px) {
-          width: 20px;
-          height: 20px;
-        }
-      }
-      &>figcaption{
-        color: #FFF;
-        font-family: Ondo;
-        font-size: 30px;
-        font-style: normal;
-        font-weight: 800;
-        line-height: 110.6%; /* 33.18px */
-        letter-spacing: 1.2px;
-        text-transform: uppercase;
-        @media only screen and (max-width: 600px) {
-          font-size: 16.595px;
-          font-weight: 800;
-          line-height: 110.6%; /* 18.354px */
-          letter-spacing: 0.664px;
-          text-transform: uppercase;
-        }
-      }
-    }
-  }
+  @include glassMover(1);
 }
 .mobile-navigation-bar{
   top: 20px;
@@ -308,13 +315,48 @@ main{
 
 // discover the virtual reality gaming section
 .virtual-reality{
-  >div{
+  padding: 0;
+  display: grid;
+  place-items: center;
+  &>div{
     width: 1240px;
     height: 556px;
     border-radius: 10px;
-    border: 1px solid #000;
-    background: url(<path-to-image>), lightgray 0% 0% / 100px 100px repeat, linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+    // border: 1px solid #000;
+    background-image: url('../images/Rectangle\ 5.png');
     box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0.00);
     backdrop-filter: blur(25px);
+    padding: 0 !important;
+    &>figure{
+      width: 725px;
+      height: 639px;
+      flex-shrink: 0;
+      // position: absolute;
+      // bottom: 0;
+      // left: 0;
+      transform: translateY(-13.5%);
+      padding: 0 !important;
+    }
+    &>div{
+      width: 463px;
+      transform: translateY(-10%);
+      &>p{
+        color: #FFF;
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 185.1%; /* 29.616px */
+        letter-spacing: 0.64px;
+      }
+      &>.header-button-two{
+        // &:hover{
+        //   filter: blur(3px);
+        // }
+      }
+    }
   }
+}
+.glass-mover2{
+  @include glassMover(2);
 }

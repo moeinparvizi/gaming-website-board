@@ -36,6 +36,7 @@ document.querySelectorAll('.header-button>div').forEach(val => {
 
 // scroll animation
 const moverFigure = document.querySelectorAll('.glass-mover>div>figure')
+const moverFigure2 = document.querySelectorAll('.glass-mover2>div>figure')
 let flag2 = 0
 window.addEventListener('scroll', e => {
   if (flag2 <= 0) {
@@ -45,6 +46,9 @@ window.addEventListener('scroll', e => {
     }
   }
   moverFigure.forEach(val => {
+    val.style.transform = `translateX(${flag2}px)`
+  })
+  moverFigure2.forEach(val => {
     val.style.transform = `translateX(${flag2}px)`
   })
 })
@@ -61,15 +65,16 @@ window.addEventListener('scroll', () => {
   menuScroll.style.backgroundColor = 'rgba(255, 255, 255, .3)'
   if (window.scrollY > 500) {
     menuScroll.style.position = 'fixed'
+    // menuScroll.style.zIndex = '99999 !important'
     menuScroll.style.left = '0'
     menuScroll.style.backgroundColor = 'rgba(255, 255, 255, .5)'
   } if (window.scrollY < 500) {
     menuScroll.style.left = '400px'
-    omenuScroll.style.opacity = '0'
+    menuScroll.style.opacity = '0'
+    menuScroll.style.position = 'relative'
     setTimeout(() => {
-      menuScroll.style.position = 'relative'
       menuScroll.style.left = '0'
-      omenuScroll.style.opacity = '1'
+      menuScroll.style.opacity = '1'
     }, 1000)
   }
 })
@@ -115,3 +120,16 @@ let swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
 });
+
+document.querySelectorAll('.virtual-reality>div>div>.header-button-two').forEach(val => {
+  val.addEventListener('mouseover', () => {
+    val.classList.add('animate__animated')
+    val.classList.add('animate__pulse')
+    val.style.opacity = '.8'
+  })
+  val.addEventListener('mouseleave', () => {
+    val.classList.remove('animate__animated')
+    val.classList.remove('animate__pulse')
+    val.style.opacity = '1'
+  })
+})
