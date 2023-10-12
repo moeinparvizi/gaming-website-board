@@ -53,17 +53,21 @@ window.addEventListener('scroll', e => {
 // 
 const menuScroll = document.querySelector('.head-nav-menu')
 menuScroll.style.transition = '1s'
-window.addEventListener('scroll', (e) => {
+menuScroll.style.backgroundColor = 'rgba(255, 255, 255, .2)'
+menuScroll.style.paddingRight = '40px'
+menuScroll.style.borderRadius = '30px'
+window.addEventListener('scroll', () => {
   menuScroll.style.left = '400px'
-  if (window.scrollY > 50) {
+  menuScroll.style.backgroundColor = 'rgba(255, 255, 255, .3)'
+  if (window.scrollY > 500) {
     menuScroll.style.position = 'fixed'
     menuScroll.style.left = '0'
-  } if (window.scrollY < 50) {
+    menuScroll.style.backgroundColor = 'rgba(255, 255, 255, .5)'
+  } if (window.scrollY < 500) {
     menuScroll.style.left = '400px'
     omenuScroll.style.opacity = '0'
     setTimeout(() => {
       menuScroll.style.position = 'relative'
-      menuScroll.style.backgroundColor = 'rgba(0, 0, 0,0.5);'
       menuScroll.style.left = '0'
       omenuScroll.style.opacity = '1'
     }, 1000)
@@ -103,3 +107,11 @@ const openningMenu = () => {
     mobileMenuList.style.left = '-3000px'
   }
 }
+let swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  // spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
