@@ -66,17 +66,17 @@ const glassMoverTransform = (v) => {
 // 
 const menuScroll = document.querySelector('.head-nav-menu')
 menuScroll.style.transition = '1s'
-menuScroll.style.backgroundColor = 'rgba(255, 255, 255, .2)'
+menuScroll.style.backgroundColor = 'rgba(0, 0, 0, 0)'
 menuScroll.style.paddingRight = '40px'
 menuScroll.style.borderRadius = '30px'
 window.addEventListener('scroll', () => {
   menuScroll.style.left = '400px'
-  menuScroll.style.backgroundColor = 'rgba(255, 255, 255, .3)'
+  menuScroll.style.backgroundColor = 'rgba(255, 255, 255, 0)'
   if (window.scrollY > 500) {
     menuScroll.style.position = 'fixed'
     menuScroll.style.zIndex = '99999 !important'
     menuScroll.style.left = '0'
-    menuScroll.style.backgroundColor = 'rgba(255, 255, 255, .5)'
+    menuScroll.style.backgroundColor = 'rgba(0,0,0, .1)'
   } if (window.scrollY < 500) {
     menuScroll.style.left = '400px'
     menuScroll.style.opacity = '0'

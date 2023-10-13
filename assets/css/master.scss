@@ -116,6 +116,8 @@ main{
     z-index: 999999;
   /* width: 100%; */
     transition: 1s;
+    @include transparentBG();
+    // background-color: rgba(0, 0, 0, .1) !important;
   &>li{
     font-family: ondo;
     font-size: 18px;
@@ -213,7 +215,6 @@ main{
   background: var(--secendery);
   filter: blur(292px);
   /* position: absolute; */
-  border: 1px solid red;
 }
 /* @keyframes textm { */
 /*   from{ */
@@ -244,7 +245,6 @@ main{
       font-size: 25px;
     }
     &>div{
-      border: 1px solid red;
       position: fixed;
       top: 0;
       left: -3000px;
@@ -305,12 +305,26 @@ main{
         transform: translateX(-8.5%);
       }
     }
+    @media only screen and (max-width: 980px) {
+      &>.header-button{
+        flex-shrink: 0;
+        img{
+          display: grid;
+          place-items: center;
+          width: 100%;
+        }
+        svg{
+          width: 138px;
+          height: 44.017px;
+        }
+      }
+    }
   }
 }
 
 // discover the virtual reality gaming section
+// TODO: resposive this section
 .virtual-reality{
-  padding: 0;
   display: grid;
   place-items: center;
   &>div{
@@ -321,7 +335,66 @@ main{
     background-image: url('../images/Rectangle\ 5.png');
     box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0.00);
     backdrop-filter: blur(25px);
-    padding: 0 !important;
+    @media only screen and (max-width: 1300px) {
+      width: 940px;
+      height: 550px;
+      &>figure{
+        border: 1px solid var(--white);
+        border-radius: 50%;
+        background-color: rgba(255,255,255,.1);
+        width: 425px !important;
+        height: 339px !important;
+        transform: translateY(22.5%) !important;
+        margin-right: 5px;
+        &>img{
+          width: 100% !important;
+        }
+      }
+    }
+    @media only screen and (max-width: 980px) {
+      width: 328px;
+      height: 788px;
+      background-image: url('../images/Rectangle\ 5\(mobile\).png');
+      position: relative;
+      &>figure{
+        width: 362px;
+        height: 389px;
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(-6.5%) translateX(-2%) !important;
+      }
+      &>div{
+        transform: translateY(-50%) !important;
+        margin-top: 30px !important;
+        &>figure{
+          width: 296px !important;
+          &>img{
+            transform: translateX(0) !important;
+          }
+        }
+        &>p{
+          width: 281px !important;
+          line-height: 171.6% !important; /* 27.456px */
+        }
+        &>div{
+          margin-left: 20px;
+          width: 138px !important;
+          height: 44.017px !important;
+          img{
+            display: grid;
+            place-items: center;
+            width: 100%;
+          }
+          svg{
+            width: 138px;
+            height: 44.017px;
+          }
+        }
+      }
+    }
     &>figure{
       width: 725px;
       height: 639px;
@@ -335,7 +408,23 @@ main{
     &>div{
       width: 463px;
       transform: translateY(-10%);
+      &>figure{
+        width: 100%;
+        &>img{
+        width: 100%;
+        }
+      }
+      @media only screen and (max-width: 1300px) {
+         width: 363px;
+         &>figure>img{
+           transform: translateX(-50%);
+         }
+         .header-button-two{
+           transform: translateY(50%);
+         }
+      }
       &>p{
+        width: 100%;
         color: #FFF;
         font-family: Lato;
         font-size: 16px;
@@ -345,9 +434,9 @@ main{
         letter-spacing: 0.64px;
       }
       &>.header-button-two{
-        // &:hover{
-        //   filter: blur(3px);
-        // }
+        width: 232px;
+        display: grid;
+        place-items: center;
       }
     }
   }
