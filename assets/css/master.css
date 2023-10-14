@@ -7,8 +7,8 @@
   src: url("../fonts/Lato/Lato-Regular.ttf");
 }
 :root {
-  --primary: #2D1E6B;
-  --secendery: #DD00B8;
+  --primary: #2d1e6b;
+  --secendery: #dd00b8;
   --white: #fff;
   --black: #000;
 }
@@ -19,7 +19,8 @@
   box-sizing: border-box;
 }
 
-a, a:visited {
+a,
+a:visited {
   text-decoration: none;
 }
 
@@ -28,12 +29,11 @@ ul > li {
 }
 
 main {
-  height: 400vh;
   background-color: var(--primary) !important;
 }
 @media only screen and (max-width: 600px) {
   main {
-    background-color: #351F7A;
+    background-color: #351f7a;
   }
 }
 
@@ -59,7 +59,7 @@ main {
 
 .header {
   height: 100vh;
-  background: #2F1F6F;
+  background: #2f1f6f;
   background: url("../../assets/images/Artboard 1 1.png"), -91.869px 41.66px/102.737% 92.356% no-repeat;
   background-size: cover;
   mix-blend-mode: color-dodge;
@@ -131,7 +131,7 @@ main {
   }
 }
 .header > .header-dec > .header-numbers > figure > figcaption {
-  color: #FFF;
+  color: #fff;
   font-family: lato;
   font-size: 16.715px;
   font-style: normal;
@@ -198,7 +198,7 @@ main {
   }
 }
 .glass-mover > div > figure > figcaption {
-  color: #FFF;
+  color: #fff;
   font-family: Ondo;
   font-size: 30px;
   font-style: normal;
@@ -234,13 +234,18 @@ main {
   font-size: 25px;
 }
 .mobile-navigation-bar > .mobile-menu > div {
+  box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+  backdrop-filter: blur(25px);
+  background-color: rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: -3000px;
   background-color: rgba(0, 0, 0, 0.7);
 }
 .mobile-navigation-bar > .mobile-menu > div > ul {
+  backdrop-filter: blur(0px);
   justify-content: start !important;
+  background-color: rgba(0, 0, 0, 0) !important;
 }
 .mobile-navigation-bar > .mobile-menu > div > ul > li {
   transition: 1s;
@@ -415,8 +420,8 @@ main {
 }
 .virtual-reality > div > div > p {
   width: 100%;
-  color: #FFF;
-  font-family: Lato;
+  color: var(--white);
+  font-family: lato;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -464,7 +469,7 @@ main {
   }
 }
 .glass-mover2 > div > figure > figcaption {
-  color: #FFF;
+  color: #fff;
   font-family: Ondo;
   font-size: 30px;
   font-style: normal;
@@ -480,6 +485,139 @@ main {
     line-height: 110.6%; /* 18.354px */
     letter-spacing: 0.664px;
     text-transform: uppercase;
+  }
+}
+
+.top-games {
+  display: grid;
+  place-items: center;
+}
+.top-games > .row > figure {
+  display: grid;
+  place-items: center;
+}
+@media only screen and (max-width: 800px) {
+  .top-games > .row > figure {
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .top-games > .row > figure > img {
+    width: 334px !important;
+  }
+}
+
+.nav-link {
+  display: grid;
+  place-items: center;
+  background-color: transparent !important;
+  padding: 0 !important;
+  margin: 10px;
+}
+.nav-link > div {
+  color: var(--white);
+  text-align: center;
+  font-family: lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110.6%; /* 19.908px */
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+}
+.nav-link > div h6 {
+  width: 130%;
+  padding: 0;
+  transform: translateX(-10%);
+}
+@media only screen and (max-width: 800px) {
+  .nav-link {
+    margin: 7px;
+  }
+  .nav-link > div {
+    display: grid;
+    place-items: center;
+  }
+  .nav-link > div > div {
+    display: grid;
+    place-items: center;
+  }
+  .nav-link > div > div > h6 {
+    font-size: 7.966px;
+    font-weight: 800;
+    letter-spacing: 0.479px;
+    transform: translate(2.5%, 50%);
+  }
+  .nav-link > div svg {
+    width: 120px;
+    height: 32px;
+  }
+}
+
+.games-cards > .games-cards-card {
+  width: 397px;
+  height: 537px;
+  border-radius: 10px;
+  background-image: url("../images/posts.png");
+  box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+  backdrop-filter: blur(25px);
+}
+.games-cards > .games-cards-card > h5 {
+  color: var(--white);
+  font-family: lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110.6%; /* 26.544px */
+  letter-spacing: 0.84px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.games-cards > .games-cards-card > div {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.games-cards > .games-cards-card > div > figure > img {
+  width: 53px;
+  height: 53px;
+  flex-shrink: 0;
+}
+.games-cards > .games-cards-card > div > div {
+  color: var(--white);
+}
+.games-cards > .games-cards-card > div > div > h6 {
+  font-family: lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110.6%; /* 19.908px */
+  letter-spacing: 0.63px;
+}
+.games-cards > .games-cards-card > div > div > p {
+  font-family: lato;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110.6%; /* 11.06px */
+  letter-spacing: 0.35px;
+}
+.games-cards > .games-cards-card > button {
+  background: transparent;
+  border: none;
+}
+@media only screen and (max-width: 500px) {
+  .games-cards > .games-cards-card {
+    width: 332px;
+    height: 449.078px;
+  }
+  .games-cards > .games-cards-card > figure > img {
+    width: 301.894px;
+    height: 221.612px;
+  }
+  .games-cards > .games-cards-card > button > figure > img {
+    width: 301.894px;
+    height: 43.486px;
   }
 }
 
