@@ -174,20 +174,33 @@ firstButton.forEach((val) => {
   });
 });
 
-// document.querySelector('.fetch-random-users').addEventListener('load',event => {
-//   console.log(event)
-// })
+// random users
 const fetchDiv = document.querySelectorAll(".fetch-random-users");
 const randomUser = () => {
-  console.log("testOut");
   fetchDiv.forEach((val) => {
-    console.log("test");
     fetch("https://randomuser.me/api")
       .then((res) => res.json())
       .then((result) => {
         val.innerHTML = `
               <figure class="me-2"><img class="rounded-circle" src="${result.results[0].picture.medium}" alt=""></img></figure>
               <div class="d-flex flex-column">
+                <h6 class="text-capitalize">${result.results[0].name.first} ${result.results[0].name.last}</h6>
+                <p class="text-capitalize">${result.results[0].email}</p>
+              </div>
+          `;
+      });
+  });
+  randomUser2();
+};
+const fetchDiv2 = document.querySelectorAll(".comment-randomuser");
+const randomUser2 = () => {
+  fetchDiv2.forEach((val) => {
+    fetch("https://randomuser.me/api")
+      .then((res) => res.json())
+      .then((result) => {
+        val.innerHTML = `
+              <figure class="m-0 p-0"><img class="rounded-circle" src="${result.results[0].picture.medium}" alt=""></img></figure>
+              <div class="d-flex flex-column m-0 p-0 ms-2">
                 <h6 class="text-capitalize">${result.results[0].name.first} ${result.results[0].name.last}</h6>
                 <p class="text-capitalize">${result.results[0].email}</p>
               </div>

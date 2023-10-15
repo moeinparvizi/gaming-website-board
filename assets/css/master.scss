@@ -28,6 +28,36 @@ ul > li {
   list-style-type: none;
 }
 // functions
+@mixin randomUsers {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  & > figure {
+    & > img {
+      width: 53px;
+      height: 53px;
+      flex-shrink: 0;
+    }
+  }
+  & > div {
+    color: var(--white);
+    & > h6 {
+      font-family: lato;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110.6%; /* 19.908px */
+      letter-spacing: 0.63px;
+    }
+    & > p {
+      font-family: lato;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110.6%; /* 11.06px */
+      letter-spacing: 0.35px;
+    }
+  }
+}
 @mixin transparentBG {
   background: lightgray 0% 0% / 100px 100px repeat,
     linear-gradient(
@@ -551,34 +581,7 @@ main {
       margin-top: 10px;
     }
     & > div {
-      margin-bottom: 10px;
-      margin-top: 10px;
-      & > figure {
-        & > img {
-          width: 53px;
-          height: 53px;
-          flex-shrink: 0;
-        }
-      }
-      & > div {
-        color: var(--white);
-        & > h6 {
-          font-family: lato;
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 110.6%; /* 19.908px */
-          letter-spacing: 0.63px;
-        }
-        & > p {
-          font-family: lato;
-          font-size: 10px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 110.6%; /* 11.06px */
-          letter-spacing: 0.35px;
-        }
-      }
+      @include randomUsers();
     }
     & > button {
       background: transparent;
@@ -600,6 +603,72 @@ main {
             height: 43.486px;
           }
         }
+      }
+    }
+  }
+}
+
+.comments {
+  & > .comment {
+    padding: 30px;
+    border-radius: 10px;
+    background: url("../images/commetBackground.png");
+    background-size: cover;
+    box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+    object-fit: cover;
+    backdrop-filter: blur(25px);
+    @media only screen and (max-width: 800px) {
+      padding: 20px;
+    }
+
+    & > div {
+      & > p {
+        color: var(--white);
+        font-family: lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 185.1%; /* 29.616px */
+        letter-spacing: 0.64px;
+
+        @media only screen and (max-width: 800px) {
+          font-size: 10px;
+          text-align: center;
+        }
+      }
+
+      & > div {
+        & > .comment-verified {
+          display: grid;
+          place-items: center;
+          & > span {
+            color: var(--white);
+            font-family: lato;
+            font-size: 14.65px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 110.6%; /* 16.203px */
+            letter-spacing: 0.513px;
+            text-transform: capitalize;
+          }
+        }
+        & > .comment-randomuser {
+          @include randomUsers();
+        }
+      }
+    }
+    & > div:nth-of-type(2) {
+      position: absolute;
+      top: -15%;
+      left: 70%;
+      & > span {
+        margin: 5px;
+      }
+
+      @media only screen and (max-width: 800px) {
+        position: absolute;
+        top: -24% !important;
+        left: 65% !important;
       }
     }
   }
