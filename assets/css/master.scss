@@ -609,7 +609,7 @@ main {
 }
 
 .comments {
-  & > .comment {
+  .comment {
     padding: 30px;
     border-radius: 10px;
     background: url("../images/commetBackground.png");
@@ -636,8 +636,8 @@ main {
           text-align: center;
         }
       }
-
       & > div {
+        flex-wrap: wrap;
         & > .comment-verified {
           display: grid;
           place-items: center;
@@ -651,9 +651,20 @@ main {
             letter-spacing: 0.513px;
             text-transform: capitalize;
           }
+          @media only screen and (max-width: 800px) {
+            font-size: 10.65px;
+          }
         }
         & > .comment-randomuser {
           @include randomUsers();
+          @media only screen and (max-width: 800px) {
+            & > figure {
+              & > img {
+                width: 33px;
+                height: 33px;
+              }
+            }
+          }
         }
       }
     }
@@ -670,6 +681,20 @@ main {
         top: -24% !important;
         left: 65% !important;
       }
+    }
+  }
+}
+.swiper {
+  padding: 40px;
+  margin-bottom: 50px;
+}
+
+footer{
+  background: url("../images/footerBackground.png");
+  background-size: cover;
+  background-position: 100% 100%;
+  & > .footer-row{
+    & > .footer-details{
     }
   }
 }

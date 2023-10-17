@@ -621,7 +621,7 @@ main {
   }
 }
 
-.comments > .comment {
+.comments .comment {
   padding: 30px;
   border-radius: 10px;
   background: url("../images/commetBackground.png");
@@ -631,11 +631,11 @@ main {
   backdrop-filter: blur(25px);
 }
 @media only screen and (max-width: 800px) {
-  .comments > .comment {
+  .comments .comment {
     padding: 20px;
   }
 }
-.comments > .comment > div > p {
+.comments .comment > div > p {
   color: var(--white);
   font-family: lato;
   font-size: 16px;
@@ -645,16 +645,19 @@ main {
   letter-spacing: 0.64px;
 }
 @media only screen and (max-width: 800px) {
-  .comments > .comment > div > p {
+  .comments .comment > div > p {
     font-size: 10px;
     text-align: center;
   }
 }
-.comments > .comment > div > div > .comment-verified {
+.comments .comment > div > div {
+  flex-wrap: wrap;
+}
+.comments .comment > div > div > .comment-verified {
   display: grid;
   place-items: center;
 }
-.comments > .comment > div > div > .comment-verified > span {
+.comments .comment > div > div > .comment-verified > span {
   color: var(--white);
   font-family: lato;
   font-size: 14.65px;
@@ -664,19 +667,24 @@ main {
   letter-spacing: 0.513px;
   text-transform: capitalize;
 }
-.comments > .comment > div > div > .comment-randomuser {
+@media only screen and (max-width: 800px) {
+  .comments .comment > div > div > .comment-verified {
+    font-size: 10.65px;
+  }
+}
+.comments .comment > div > div > .comment-randomuser {
   margin-bottom: 10px;
   margin-top: 10px;
 }
-.comments > .comment > div > div > .comment-randomuser > figure > img {
+.comments .comment > div > div > .comment-randomuser > figure > img {
   width: 53px;
   height: 53px;
   flex-shrink: 0;
 }
-.comments > .comment > div > div > .comment-randomuser > div {
+.comments .comment > div > div > .comment-randomuser > div {
   color: var(--white);
 }
-.comments > .comment > div > div > .comment-randomuser > div > h6 {
+.comments .comment > div > div > .comment-randomuser > div > h6 {
   font-family: lato;
   font-size: 18px;
   font-style: normal;
@@ -684,7 +692,7 @@ main {
   line-height: 110.6%; /* 19.908px */
   letter-spacing: 0.63px;
 }
-.comments > .comment > div > div > .comment-randomuser > div > p {
+.comments .comment > div > div > .comment-randomuser > div > p {
   font-family: lato;
   font-size: 10px;
   font-style: normal;
@@ -692,20 +700,37 @@ main {
   line-height: 110.6%; /* 11.06px */
   letter-spacing: 0.35px;
 }
-.comments > .comment > div:nth-of-type(2) {
+@media only screen and (max-width: 800px) {
+  .comments .comment > div > div > .comment-randomuser > figure > img {
+    width: 33px;
+    height: 33px;
+  }
+}
+.comments .comment > div:nth-of-type(2) {
   position: absolute;
   top: -15%;
   left: 70%;
 }
-.comments > .comment > div:nth-of-type(2) > span {
+.comments .comment > div:nth-of-type(2) > span {
   margin: 5px;
 }
 @media only screen and (max-width: 800px) {
-  .comments > .comment > div:nth-of-type(2) {
+  .comments .comment > div:nth-of-type(2) {
     position: absolute;
     top: -24% !important;
     left: 65% !important;
   }
+}
+
+.swiper {
+  padding: 40px;
+  margin-bottom: 50px;
+}
+
+footer {
+  background: url("../images/footerBackground.png");
+  background-size: cover;
+  background-position: 100% 100%;
 }
 
 /*# sourceMappingURL=master.css.map */
