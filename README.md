@@ -60,8 +60,14 @@ moein parvizi
 
 ## About The Project
 
-Hints :
 
+![download](https://github.com/moeinparvizi/gaming-website-board/assets/38692466/f0d03cd3-6421-4563-83df-ddd4b901df64)
+![download (1)](https://github.com/moeinparvizi/gaming-website-board/assets/38692466/7e2f6aeb-3936-4f2c-98fc-e467b60e9d1c)
+![download (2)](https://github.com/moeinparvizi/gaming-website-board/assets/38692466/c2bf1f4d-702c-4e40-8a50-b4a56e7e8077)
+![download (3)](https://github.com/moeinparvizi/gaming-website-board/assets/38692466/f1e21a4f-2e34-456e-a8b0-4ebf71738561)
+
+
+Hints :
 - build with animation css
 - build with vanila js
 - It has been tried to clean the code
