@@ -14,7 +14,7 @@ moein parvizi
 <br />
 <div align="center">
   <a href="https://github.com/moeinparvizi/gaming-website-board">
-    <img src="assets/images/Group 2.png" alt="Logo" width="110" height="80">
+    <img src="assets/images/Group 2.png" alt="Logo" width="160" height="80">
   </a>
 
   <h3 align="center">gaming website</h3>
@@ -127,7 +127,6 @@ _Below is an example of how you can instruct your audience on installing and set
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
