@@ -92,7 +92,6 @@ hi welcome to the my new project i hope you enjoy from my new project, this webs
 - [![JavaScript][JavaScript]][JavaScript]
 - [animatecss](https://animate.style/)
 - [swiperJS](https://swiperjs.com/)
-- [aos](https://github.com/michalsnik/aos)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
