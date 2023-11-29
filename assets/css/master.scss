@@ -59,7 +59,8 @@ ul > li {
   }
 }
 @mixin transparentBG {
-  background: lightgray 0% 0% / 100px 100px repeat,
+  background:
+    lightgray 0% 0% / 100px 100px repeat,
     linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.08) 0%,
@@ -177,10 +178,11 @@ main {
 .header {
   height: 100vh;
   background: #2f1f6f;
-  background: url("../../assets/images/Artboard\ 1\ 1.png"),
+  background:
+    url("../../assets/images/Artboard\ 1\ 1.png"),
     -91.869px 41.66px / 102.737% 92.356% no-repeat;
   background-size: cover;
-  mix-blend-mode: color-dodge;
+  mix-blend-mode: screen;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   @media only screen and (max-width: 600px) {
     background-size: 165%;
@@ -689,12 +691,12 @@ main {
   margin-bottom: 50px;
 }
 
-footer{
+footer {
   background: url("../images/footerBackground.png");
   background-size: cover;
   background-position: 100% 100%;
-  & > .footer-row{
-    & > .footer-details{
+  & > .footer-row {
+    & > .footer-details {
     }
   }
 }
